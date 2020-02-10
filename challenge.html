@@ -1,0 +1,126 @@
+<html>
+    <header>
+        <title>Challenge</title>
+    </header>
+
+    <body>
+        <script>
+            console.log('Challenge');
+
+            //Exercícios: Módulo 01
+
+            //1º exercício
+            //Crie uma função que dado o objeto a seguir:
+
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+
+            function address(endereco) {
+                var value = 'O usuário mora em ' + endereco.cidade + ' / ' + endereco.uf + ', no bairro ' + endereco.bairro + 
+                ', na rua "' + endereco.rua + '" com nº ' + endereco.numero + '.';
+                return value;
+            }
+
+            //Retorne o seguinte conteúdo:
+            console.log(address(endereco));
+
+
+            //2º exercício
+            //Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+
+            function evenNumbers(x, y) {
+                
+                for (var i = x + 1; i < y; i++) {
+                    if (i % 2 === 0) {
+                        console.log(i);
+                    }
+                }
+                
+            }
+
+            evenNumbers(14, 502);
+
+
+            //3º exercício
+            //Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript" 
+            //e retorna um booleano true/false caso exista ou não.
+
+            var skills = ["Javascript", "ReactJS", "React Native"];
+
+            function temHabilidade(skills) {
+
+                if (skills.indexOf('Javascript') >= 0) {
+                    return true;
+                } else {
+                    return false
+                }
+
+            }
+
+            console.log(temHabilidade(skills));
+
+
+            //4º exercício
+            //Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+
+            function experiencia(anos) {
+                
+                if (anos < 1) {
+                    return 'Iniciante';
+                    
+                } else if (anos >= 1 && anos < 3) {
+                    return 'Intermediário';
+                    
+                } else if (anos >= 3 && anos <= 6) {
+                    return 'Avançado';
+                
+                } else {
+                    return 'Jedi Master';
+                }
+
+            }
+
+            for (var i = -2; i < 10; i++) {
+                console.log(experiencia(i));
+            }
+
+
+            //5º exercício
+            //Dado o seguinte vetor de objetos:
+
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            //Escreva uma função que produza o seguinte resultado:
+            //O Diego possui as habilidades: Javascript, ReactJS, Redux
+            //O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+
+            function doStuff() {
+
+                for (var i = 0; i < usuarios.length; i++) {
+                    var usuario = usuarios[i];
+                    var frase = 'O ' + usuario.nome + ' possui as habilidades: ' + usuario.habilidades;
+                    console.log(frase);
+                }
+
+            }
+
+            doStuff();
+
+        </script>
+    </body>
+
+</html>

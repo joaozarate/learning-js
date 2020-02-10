@@ -1,0 +1,45 @@
+<html>
+    <header>
+        <title>Conditions</title>
+    </header>
+    <body>
+        <script>
+
+            console.log('Conditions');
+
+            function returnGenre(genre){
+
+                if(genre === 'M'){
+                    return 'Male';
+                } else if (genre === 'F') {
+                    return 'Female';
+                } else {
+                    return 'Other'
+                }
+
+            }
+
+            console.log(returnGenre('M'));
+            console.log(returnGenre('F'));
+            console.log(returnGenre('MF'));
+
+            function returnGenre2(genre){
+
+                switch (genre) {
+                    case 'M':
+                        return 'Male';
+                    case 'F':
+                        return 'Female';
+                    default:
+                        return 'Other';
+                }
+                
+            }
+
+            console.log(returnGenre2('M'));
+            console.log(returnGenre2('F'));
+            console.log(returnGenre2('MF'));
+
+        </script>
+    </body>
+</html>
