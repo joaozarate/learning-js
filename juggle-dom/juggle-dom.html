@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <div id="action">
+                <button onclick="addNewBox()" class="botao">Adicionar</button>
+            </div>
+        </div>
+        <script>
+
+            function addNewBox() {
+                
+                var parentElement = document.querySelector('#app');
+
+                var divElement = document.createElement('div');
+                divElement.className = 'box';
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                divElement.style.backgroundColor = '#f00';
+                divElement.style.marginTop = '1em';
+
+                parentElement.appendChild(divElement);
+
+            }
+
+        </script>
+    </body>
+</html>
