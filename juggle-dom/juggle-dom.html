@@ -21,9 +21,26 @@
                 divElement.style.height = 100;
                 divElement.style.backgroundColor = '#f00';
                 divElement.style.marginTop = '1em';
+                divElement.onmouseover = function () {
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    this.style.backgroundColor = color;
+                }
 
                 parentElement.appendChild(divElement);
 
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
             }
 
         </script>
