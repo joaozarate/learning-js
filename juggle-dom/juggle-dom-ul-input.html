@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input id="name" type="text" name="nome">
+            <div id="action">
+                <button onclick="add()" class="botao">Adicionar</button>
+            </div>
+        </div>
+        <script>
+
+            var names = ["Diego", "Gabriel", "Lucas"];
+
+            var parentElement = document.querySelector('#app');
+
+            var ulElement = document.createElement('ul');
+
+            for (let i = 0; i < names.length; i++) {
+                const name = names[i];
+                var liElement = document.createElement('li');
+                liElement.innerText = name;
+                ulElement.appendChild(liElement);
+            }
+
+            parentElement.appendChild(ulElement);
+
+            function add() {
+                var inputElement = document.querySelector('#name');
+                var liElement = document.createElement('li');
+                liElement.innerText = inputElement.value;
+                ulElement.appendChild(liElement);
+                inputElement.value = "";
+            }
+
+        </script>
+    </body>
+</html>
